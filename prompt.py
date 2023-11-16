@@ -4,7 +4,7 @@ from dotenv import dotenv_values
 
 client = OpenAI(api_key=dotenv_values(".env")["OPENAI_API_KEY"])
 
-def get_playlist(prompt, count=8):
+def get_playlist(prompt, count):
     messages = [
         {
             "role": "system",
