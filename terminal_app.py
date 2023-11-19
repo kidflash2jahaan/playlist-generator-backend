@@ -21,7 +21,7 @@ track_ids = []
 prompt = input("What kind of songs would you like? >>> ")
 count_input = input("How many songs would you like? (enter for default) >>> ")
 
-playlist = get_playlist(prompt, int(count_input) if count_input else None)
+playlist = get_playlist(prompt, int(count_input) if count_input else 8)
 
 for item in playlist["playlist"]:
     artist, song = item["artist"], item["song"]
