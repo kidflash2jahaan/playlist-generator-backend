@@ -19,9 +19,9 @@ current_user = sp.current_user()
 assert current_user is not None
 track_ids = []
 prompt = input("What kind of songs would you like? >>> ")
-count_input = input("How many songs would you like? (enter for default) >>> ")
+count = input("How many songs would you like? (enter for default) >>> ")
 
-playlist = get_playlist(prompt, int(count_input) if count_input else 8)
+playlist = get_playlist(prompt, int(count) if count else 8)
 
 for item in playlist["playlist"]:
     artist, song = item["artist"], item["song"]
